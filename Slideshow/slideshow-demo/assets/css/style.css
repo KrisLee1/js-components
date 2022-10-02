@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.container ul {
+    list-style: none;
+}
+
+.container .btn {
+    transition: transform .5s ease,
+                background-color .5s ease;
+}
+
+.container .btn:hover {
+    transform: scale(1.2);
+    background-color: #ffffff80 !important;
+}
+
+.container .img-box {
+    width: 30rem;
+    height: 20rem;
+    position: relative;
+    display: flex;
+}
+
+.container .img-box li.img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 20rem;
+    font-size: 8rem;
+    flex-shrink: 0;
+    color: white;
+    background-color: bisque;
+}
+
+.container .img-box li:last-child,
+.container .img-box li:nth-child(2) {
+    background-color: rgb(86, 225, 179);
+}
+.container .img-box li:nth-child(3) {
+    background-color: rgb(133, 192, 255);
+}
+.container .img-box li:nth-child(4) {
+    background-color: rgb(209, 155, 251);
+}
+.container .img-box li:nth-child(5) {
+    background-color: rgb(254, 128, 166);
+}
+.container .img-box li:first-child,
+.container .img-box li:nth-child(6) {
+    background-color: rgb(255, 214, 132);
+}
+
+
+.container .nav-box {
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+
+.container .nav-box li.btn {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    margin: .5rem .3rem;
+    font-size: .8rem;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff30;
+}
+
+.container .nav-box li.current {
+    background-color: #ffffffd0;
+    transform: scale(1.2);
+}
+
+.container .control-btn-box {
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.container .control-btn-box-left {
+    left: 0;
+}
+
+.container .control-btn-box-right {
+    right: 0;
+}
+
+.container .control-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: .5rem;
+    border-radius: 50%;
+    border: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #ffffff30;
+}
+
