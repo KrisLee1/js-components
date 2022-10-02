@@ -6,13 +6,17 @@
  * @FilePath: /js-components/Slideshow/README.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
+
 # Slideshow 轮播图组件
 
 ## 预览 Preview
+
 [前往码上掘金](https://code.juejin.cn/pen/7149798794937237534)
 
 ## 使用 Use
+
 导航按钮、上一张按钮、下一张按钮通过控件方式灵活添加。
+
 ```javascript
 const slideshow = new Slideshow('#slideshow', '#slideshow .img-box');   // 创建 Slideshow
 const nav = new SlideshowNavigator('#slideshow .nav-box');              // 创建导航按钮控件
@@ -22,6 +26,7 @@ const next = new SlideshowNext('#slideshow .next-btn');                 // 创�
 slideshow.addWidgets(nav, pre, next);       // 添加控件
 slideshow.autoPlay(3000);                   // 开启自动播放，时间间隔 3000ms
 ```
+
 ```javascript
 // 链式调用
 new Slideshow('#slideshow', '#slideshow .img-box')
@@ -32,7 +37,9 @@ new Slideshow('#slideshow', '#slideshow .img-box')
     )
     .autoPlay(2000);
 ```
+
 导航是通过 data-index 属性获取索引，所以导航按钮需要设置 data-index 属性的值。
+
 ```html
 <div id="slideshow" class="container">
     <!-- 图片 -->
@@ -45,7 +52,7 @@ new Slideshow('#slideshow', '#slideshow .img-box')
     </ul>
     <!-- 导航按钮 -->
     <ul class="nav-box">
-        <li class="btn" data-index="1"></li>
+        <li class="btn current" data-index="1"></li>
         <li class="btn" data-index="2"></li>
         <li class="btn" data-index="3"></li>
         <li class="btn" data-index="4"></li>
@@ -53,16 +60,18 @@ new Slideshow('#slideshow', '#slideshow .img-box')
     </ul>
     <!-- 上一张按钮 -->
     <div class="control-btn-box control-btn-box-left">
-        <button class="btn control-btn pre-btn">&lt;</button>
+        <button class="btn control-btn pre-btn"><</button>
     </div>
     <!-- 下一张按钮 -->
     <div class="control-btn-box control-btn-box-right">
-        <button class="btn control-btn next-btn">&gt;</button>
+        <button class="btn control-btn next-btn">></button>
     </div>
-    
+  
 </div>
 ```
+
 当前导航按钮 class=”current“，可以用此class设置当前导航按钮的样式。
+
 ```css
 .container .nav-box li.current {
     background-color: #ffffffd0;
